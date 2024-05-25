@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet"/>
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="stylesheet" href="../src/Script.css">
+    <link rel="shortcut icon" type="image/png" href="favicon.ico">
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>Diet Calculation App</title>
+    <header>
+        <h1 align="center"> Diet Calculator</h1>
+    </header>
+  </head>
+  <body>
+    <script type="text/javascript" src="../src/bmr.js"></script>
+    <script type="text/javascript" src="../src/resources.js"></script>
+    <div id ="container" align="center">
+        <form>
+          <div class="wrapper-calories">
+              <div id="column-one">
+                  <p class="input-calories"> Enter total daily calorie intake
+                  <input id = "targetCalories" name="CalorieIntake" type="text" size="7" value="1500" 
+                  class="calorie-field-style">
+                  </p>
+                  <h3 id="calculator-h3">Enter desired macronutrient percentages %</h3>
+                  <p>
+                      Carbohydrate
+                      <input type="text" id ="carb-per" name="carb-per" value="30"  size="4">
+                  </p>
+                  <p>
+                      Protein
+                      <input type="text" id="protien-per" name="protien-per" value="35" size="4">
+                  </p>
+                  <p>
+                      Fat
+                      <input type="text" id="fat-per" name="fat-per" value="35" size="4">                    
+                  </p>
+                      <div class="inner">
+                      <input type="button" value="Calculate" class="Button" onclick="calc(this.form)">
+                      <input type="reset" value="Reset" name="Reset" class="Button">
+                      </div>
+                      <p> Note: Please make sure that all the percentages add upto 100</p>
+              </div>
+              <div id="column-two" class = "grid-container">
+              <div class="grid-child-calories">
+                <h3 id="calculator-h3">Calories from each macro</h3>
+                <p>
+                    Carbs
+                    <input name="CarbCalories" type="text" size="7" class="calorie-results-field" placeholder="Carb calories"> 
+                </p>
+                <p>
+                    Protein
+                    <input name="ProteinCalories" type="text" size="7" class="calorie-results-field" placeholder="Protein calories"> 
+                </p>
+                <p>
+                    Fat
+                    <input name="FatCalories" type="text" size="7" class="calorie-results-field" placeholder="Fat calories"> 
+                </p>
+              </div>
+              <div class="grid-child-grams">
+                <h3 id="calculator-h3">Grams of each macro</h3>
+                <p>
+                    Carbs (g)
+                    <input name="CarbGrams" type="text" size="7" class="grams-results-field" placeholder="Carb grams"> </p>
+                <p>
+                    Protein (g)
+                    <input name="ProteinGrams" type="text" size="7" class="grams-results-field" placeholder="Protein grams"></p>
+                <p>
+                    Fat (g)
+                    <input name="FatGrams" type="text" size="7" class="grams-results-field" placeholder="Fat grams"></p>
+              </div>
+              </div>
+          </div>
+    </form>
+    </div>
+    <div class = "resources">
+      <div class="resources-dropdown">
+        <select name="slec" id="select-source" class="resource-select">
+          <option value="Dairy" selected>Dairy</option>
+          <option value="Veg">Veg</option>
+          <option value="Non-Veg">Non-Veg</option>
+          <option value="Seeds">Seeds</option>
+          <option value="Nuts">Nuts</option>
+          <option value="Millets">Millets</option>
+        </select>
+        <input type="button" id = "btnAdd" class="Button addBtn"onclick = "AddDropDownList()" value = "Add Diet Sources" />
+        <input type="button" class="Button Remove" onclick="btnRemove()" value = "Remove">
+      </div>
+      <div id = "dvContainer" class="addCont"></div>
+      <div class="total">
+        <p id="total-resources"></p>
+      </div>
+      
+    </div>
+    <!-- <footer class="main-footer">
+      <nav>
+          <a href="https://www.github.com/sasiking" class="main-footer-a">Created by SasiKing</a>
+      </nav> -->
+  </footer>
+
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+
+    <div id="outer">
+
+    </div>
+    -->
+  </body>
+        <script>
+      // internet connection
+      window.addEventListener('load', function() {
+        if (!navigator.onLine) {
+          // If there's no internet connection
+          document.body.innerHTML = "<h1>OOPS! Your internet connection is lost 😶</h1>";
+        }
+      });
+    </script>
+</html>

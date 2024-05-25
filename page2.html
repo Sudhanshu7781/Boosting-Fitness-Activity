@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+    body{
+        overflow-x: hidden;
+        background-color: white;
+    }
+    .top-nav {
+        width: auto;
+        justify-content: space-between;
+        padding: 15px 25px;
+        display: flex;
+        border: 1px solid rgba(0, 0, 0, 0.148);
+    }
+    .top-nav:hover {
+        transition: 0.6s;
+        box-shadow: 0px 0px 1px 1px rgb(190, 190, 242);
+    }
+    .top-nav>div, a {
+        text-align: center;
+        font-size: 15px;
+        color: #c4c4f6;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        text-decoration: none;
+    }
+    #prof{
+        width: 80px;
+        height: 30px;
+    }
+    #prof > img {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        border: 1px solid rgb(68, 67, 67);
+    }
+    .Exercise {
+        width: 100%;
+        height: 450px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    #box{
+        width: 250px;
+        height: 200px;
+        border: 1px solid rgba(0, 0, 0, 0.331);
+        border-radius: 6px;
+    }
+    img{
+        width: 250px;
+        height: 170px;
+        border-radius: 6px;
+
+    }
+    #header{
+        text-align: center;
+        color: white;
+        background-color: rgb(246, 144, 144);
+        font-size: 18px;
+        border-radius: 6px 6px 0px 0px;
+    }
+    #meditation{
+        width: 250px;
+        height: 180px;
+        border-radius: 0px 0px 6px 6px;
+    }
+    .yogaheader{
+        width: 100%;
+        padding: 16px 14px;
+        font-family:monospace;
+        color: rgb(241, 215, 208);
+        left: 10px;
+    }
+    h3{
+        text-align: center;
+        font-size: 20px;
+    }
+    #stretch{
+        height: 190px;
+        border-radius: 0px 0px 6px 6px;
+    }
+    .Yoga-container1{
+        width: 100%;
+        height: 500px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        justify-content: space-around;
+        border: 1px solid rgba(0, 0, 0, 0.183);
+    }
+    .img-container>img{
+        object-fit: cover;
+        width: 500px;
+        height: 300px;
+    }
+    #cnt-hed{
+        padding: 5px;
+        color: white;
+        font-size: 20px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        letter-spacing: 1px;
+    }
+    .content-container{
+        width: 350px;
+        height: 400px;
+        border-radius: 5px;
+        text-align: center;
+        padding: 6px;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: 15px;
+        letter-spacing: 1px;
+        color: rgba(0, 0, 0, 0.368);
+    }
+    span{
+        color: rgb(239, 139, 139);
+    }
+    .newinfo{
+        width: 100%;
+        padding: 14px 12px;
+        text-align: center;
+        border: 1px solid rgba(0, 0, 0, 0.192);
+    }
+    #info{
+        font-size: 18px;
+        letter-spacing: 1px;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        color: rgb(198, 198, 248);
+    }
+    .sub-nav{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        justify-content: space-around;
+        width: 450px;
+        height: 30px;
+    }
+</style>
+<body>
+    <div class="top-nav">
+        <div id="prof">
+            <img src="yogalogo.jpg" alt="">
+        </div>
+        <!--<div><p>Diet</p></div>
+        <div><p>Yoga</p></div>
+        <a href="reportgenerator.html"><div><p>Report Generate</p></div></a>
+        <a href="Application.html"><div><p>Logout</p></div></a>
+        <div id="dark"><p>DarkMode</p></div>-->
+        <div class="sub-nav">
+        <div><p><a href="diet-main/src/index.html">Diet</a></p></div>
+        <div><a href="exercise.html"><p>Exercise</p></a></div>
+        <a href="reportgenerator.html"><div><p>Report Generate</p></div></a>
+        <a href="Application.html"><div><p>Logout</p></div></a>
+        <div id="dark"><p>DarkMode</p></div>
+        </div>
+    </div>
+    <div class="yogaheader">
+        <h3>Get in Touch with Yoga</h3>
+    </div>
+    <div class="Exercise">
+        <div id="box">
+            <h2 id="header">Stretching</h2>
+            <img id="stretch" src="stretching.gif" alt="">
+
+        </div>
+        <div id="box">
+            <h2 id="header">Meditation</h2>
+            <img id="meditation" src="meditation.gif" alt="">
+        </div>
+        <div id="box">
+            <h2 id="header">Focusing</h2>
+            <img id="meditation" src="focusing.gif" alt="">
+        </div>
+        <div id="box">
+            <h2 id="header">Chakrasan</h2>
+            <img id="meditation" src="chakrasan.gif" alt="">
+        </div>
+        <div id="box">
+            <h2 id="header">Plow Pose Exercise</h2>
+            <img id="meditation" src="Plow-Pose.webp" alt="">
+        </div>
+        <div id="box">
+            <h2 id="header">Flexibility</h2>
+            <img id="meditation" src="flex.gif" alt="">
+        </div>
+        <div id="box">
+            <h2 id="header">Catcow</h2>
+            <img id="meditation" src="Cat-Cow.webp" alt="">
+        </div>
+        <div id="box">
+            <h2 id="header">Giphy</h2>
+            <img id="meditation" src="giphy.gif" alt="">
+        </div>
+    </div>
+    <div class="newinfo">
+        <h2 id="info">Follow the Given Exercises</h2>
+    </div>
+    <!--here all have diffrent sections -->
+    <div class="Yoga-container1">
+        <h2 id="cnt-hed">Stratching</h2>
+        <div class="img-container">
+            <img src="stretching.gif" alt="">
+        </div>
+        <div class="content-container">
+            <br>
+            "Limber up with stretches, embrace fluidity in motion."
+            <br>
+            "Flexibility blooms with each stretch, inviting grace into every movement."
+            <br>
+            <br>
+            <li><span>Some Tips :-</span></li>
+            <br>
+            <li>Start slowly and gently, gradually increasing the intensity to avoid injury during stretching exercises.</li>
+            <br>
+            <li>Focus on deep breathing to enhance relaxation and flexibility while stretching.</li>
+            <br>
+            <li>Hold each stretch for at least 15-30 seconds.</li>
+            <br>
+            <button id="startBtn">Start Challenge</button>
+        </div>
+    </div>
+    <!--here all have diffrent sections -->
+    <div class="Yoga-container1">
+        <h2 id="cnt-hed">Meditation</h2>
+        <div class="img-container">
+            <img src="meditation.gif" alt="">
+        </div>
+        <div class="content-container">
+            <br>
+            "Quiet the mind, find peace in the stillness of breath."
+            <br>
+            "In meditation's embrace, discover the calm within chaos."
+            <br>
+            b5
+
+            <li><span>Some Tips :-</span></li>
+            <br>
+            <li>Find a quiet and comfortable space to meditate, free from distractions.
+            </li>
+            <br>
+            <li>Focus on your breath or a specific point of concentration to anchor your attention</li>
+            <br>
+            <li>Embrace non-judgmental awareness, allowing thoughts to come and go.</li>
+            <br>
+            <button id="startBtn">Start Challenge</button>
+        </div>
+    </div>
+    <!--3rd Exercise-->
+    <div class="Yoga-container1">
+        <h2 id="cnt-hed">Meditation</h2>
+        <div class="img-container">
+            <img src="focusing.gif" alt="">
+        </div>
+        <div class="content-container">
+            <br>
+            "Quiet the mind, find peace in the stillness of breath."
+            <br>
+            "In meditation's embrace, discover the calm within chaos."
+            <br>
+            b5
+
+            <li><span>Some Tips :-</span></li>
+            <br>
+            <li>Find a quiet and comfortable space to meditate, free from distractions.
+            </li>
+            <br>
+            <li>Focus on your breath or a specific point of concentration to anchor your attention</li>
+            <br>
+            <li>Embrace non-judgmental awareness, allowing thoughts to come and go.</li>
+            <br>
+            <button id="startBtn">Start Challenge</button>
+        </div>
+    </div>
+    <!--4th Exercise-->
+    <div class="Yoga-container1">
+        <h2 id="cnt-hed">Meditation</h2>
+        <div class="img-container">
+            <img src="chakrasan.gif" alt="">
+        </div>
+        <div class="content-container">
+            <br>
+            "Quiet the mind, find peace in the stillness of breath."
+            <br>
+            "In meditation's embrace, discover the calm within chaos."
+            <br>
+            b5
+
+            <li><span>Some Tips :-</span></li>
+            <br>
+            <li>Find a quiet and comfortable space to meditate, free from distractions.
+            </li>
+            <br>
+            <li>Focus on your breath or a specific point of concentration to anchor your attention</li>
+            <br>
+            <li>Embrace non-judgmental awareness, allowing thoughts to come and go.</li>
+            <br>
+            <button id="startBtn">Start Challenge</button>
+        </div>
+    </div>
+    <!--5th Exercise-->
+    <div class="Yoga-container1">
+        <h2 id="cnt-hed">Meditation</h2>
+        <div class="img-container">
+            <img src="fullbodystratch.avif" alt="">
+        </div>
+        <div class="content-container">
+            <br>
+            "Quiet the mind, find peace in the stillness of breath."
+            <br>
+            "In meditation's embrace, discover the calm within chaos."
+            <br>
+            b5
+
+            <li><span>Some Tips :-</span></li>
+            <br>
+            <li>Find a quiet and comfortable space to meditate, free from distractions.
+            </li>
+            <br>
+            <li>Focus on your breath or a specific point of concentration to anchor your attention</li>
+            <br>
+            <li>Embrace non-judgmental awareness, allowing thoughts to come and go.</li>
+            <br>
+            <button id="startBtn">Start Challenge</button>
+        </div>
+    </div>
+    <!--6th Exercise-->
+    <div class="Yoga-container1">
+        <h2 id="cnt-hed">Meditation</h2>
+        <div class="img-container">
+            <img src="suryanamaskar.jpeg" alt="">
+        </div>
+        <div class="content-container">
+            <br>
+            "Quiet the mind, find peace in the stillness of breath."
+            <br>
+            "In meditation's embrace, discover the calm within chaos."
+            <br>
+            b5
+
+            <li><span>Some Tips :-</span></li>
+            <br>
+            <li>Find a quiet and comfortable space to meditate, free from distractions.
+            </li>
+            <br>
+            <li>Focus on your breath or a specific point of concentration to anchor your attention</li>
+            <br>
+            <li>Embrace non-judgmental awareness, allowing thoughts to come and go.</li>
+            <br>
+            <button id="startBtn">Start Challenge</button>
+        </div>
+    </div>
+    <script>
+        let dark = document.querySelector('#dark');
+        let nav = document.querySelector('.top-nav');
+    
+        dark.addEventListener('click', function() {
+            if (document.body.style.backgroundColor === "white" || document.body.style.backgroundColor === "") {
+                document.body.style.transition = "background-color 0.6s, color 0.6s";
+                document.body.style.backgroundColor = "#000";
+                changeTextColor("white"); // Call function to change text color
+            } else {
+                document.body.style.transition = "background-color 0.6s, color 0.6s";
+                document.body.style.backgroundColor = "white";
+                changeTextColor("black"); // Call function to change text color
+            }
+        });
+    
+        function changeTextColor(color) {
+            let textElements = document.querySelectorAll('.top-nav > div, .top-nav > a,.content-container');
+            textElements.forEach(function(element) {
+                element.style.color = color;
+            });
+        }
+    </script>
+        <script>
+            // internet connection
+            window.addEventListener('load', function() {
+              if (!navigator.onLine) {
+                // If there's no internet connection
+                document.body.innerHTML = "<h1>OOPS! Your internet connection is lost 😶</h1>";
+              }
+            });
+          </script>
+          <script>
+            // Challange Mode
+            document.addEventListener("DOMContentLoaded", function() {
+              const startBtn = document.getElementById("startBtn");
+              let timer, interval;
+        
+              startBtn.addEventListener("click", function() {
+                if (interval) {
+                  stopTimer();
+                } else {
+                  startTimer(1 * 10); // 5 minutes timer (in seconds)
+                }
+              });
+        
+              function startTimer(duration) {
+                let remainingTime = duration;
+                startBtn.textContent = "Stop Challenge";
+                startBtn.disabled = true;
+        
+                interval = setInterval(function () {
+                  if (remainingTime <= 0) {
+                    clearInterval(interval);
+                    alert("Congratulations! You earned 2 Super Coins.");
+                    startBtn.textContent = "Start Challenge";
+                    startBtn.disabled = false;
+                    interval = null; // Reset interval
+                  } else {
+                    remainingTime--;
+                  }
+                }, 1000);
+              }
+        
+              function stopTimer() {
+                clearInterval(interval);
+                startBtn.textContent = "Start Challenge";
+                startBtn.disabled = false;
+                interval = null; // Reset interval
+              }
+            });
+          </script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login Page</title>
+<style>
+*{
+  padding: 0;
+  margin: 0;
+}
+body{
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4d0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url(image.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .login-container {
+    background-color: rgb(195, 195, 243);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    width: 320px;
+    text-align: center;
+  }
+
+  h2 {
+    margin-bottom: 30px;
+    color: white;
+  }
+
+  .input-group {
+    margin-bottom: 20px;
+    position: relative;
+  }
+
+  .input-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    outline: none;
+  }
+
+  .input-group input:focus {
+    border-color: #007bff;
+  }
+
+  .toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+
+  button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 12px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  button:hover {
+    background-color: #0056b3;
+  }
+  #log{
+    font-size: 30px;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+</style>
+</head>
+<body>
+  <div class="shower">
+    <h2 id="log">Boosting Fitness Activity</h2>
+    <form id="login-form" class="login-container">
+      <h2>Login</h2>
+      <div class="input-group">
+        <input id="username" type="text" placeholder="Username" required>
+      </div>
+      <div class="input-group">
+        <input type="password" id="password" placeholder="Password" required>
+        <span class="toggle-password" onclick="togglePasswordVisibility()">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 4c-4.97 0-9 4.03-9 9s4.03 9 9 9 9-4.03 9-9-4.03-9-9-9zm0 16c-3.86 0-7-3.14-7-7s3.14-7 7-7 7 3.14 7 7-3.14 7-7 7zm-1-5h2v-2h-2v2z"/></svg>
+        </span>
+      </div>
+      <button type="submit">Login</button>
+    </form>
+  </div>
+
+  <script>
+    function togglePasswordVisibility() {
+      var passwordField = document.getElementById("password");
+      if (passwordField.type === "password") {
+        passwordField.type = "text";
+      } else {
+        passwordField.type = "password";
+      }
+    }
+
+    document.getElementById("login-form").addEventListener("submit", function(event) {
+      event.preventDefault(); 
+
+      var username = document.getElementById("username").value;
+      var password = document.getElementById("password").value;
+      var allowedUsernames = ["Rachit", "Sudanshu Singh", "Tarun Kumar", "Bhupendra Singh"];
+      if (allowedUsernames.includes(username) && password === "9798") {
+        alert(`Welcome ${username} You loggedin!`);
+        window.location.href = "page2.html";
+      } else {
+        alert("Invalid username or password. Please try again.");
+      }
+    });
+  </script>
+</body>
+</html>

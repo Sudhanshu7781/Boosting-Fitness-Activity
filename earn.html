@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Challenge Timer</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      text-align: center;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Challenge Timer</h1>
+    <button id="startBtn">Start Challenge</button>
+  </div>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const startBtn = document.getElementById("startBtn");
+      let timer, interval;
+
+      startBtn.addEventListener("click", function() {
+        if (interval) {
+          stopTimer();
+        } else {
+          startTimer(5 * 60); // 5 minutes timer (in seconds)
+        }
+      });
+
+      function startTimer(duration) {
+        let remainingTime = duration;
+        startBtn.textContent = "Stop Challenge";
+        startBtn.disabled = true;
+
+        interval = setInterval(function () {
+          if (remainingTime <= 0) {
+            clearInterval(interval);
+            alert("Congratulations! You earned 2 Super Coins.");
+            startBtn.textContent = "Start Challenge";
+            startBtn.disabled = false;
+            interval = null; // Reset interval
+          } else {
+            remainingTime--;
+          }
+        }, 1000);
+      }
+
+      function stopTimer() {
+        clearInterval(interval);
+        startBtn.textContent = "Start Challenge";
+        startBtn.disabled = false;
+        interval = null; // Reset interval
+      }
+    });
+  </script>
+</body>
+</html>

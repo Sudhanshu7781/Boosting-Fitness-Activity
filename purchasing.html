@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Purchasing Form</title>
+</head>
+<style>
+    body {
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  max-width: 500px;
+  margin: 50px auto;
+  text-align: center;
+}
+
+.qr-code {
+  width: 200px;
+  height: 200px;
+  margin-bottom: 20px;
+}
+
+.purchase-form {
+  background-color: #f9f9f9;
+  border: 1px solid gray;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.plan-options {
+  margin-bottom: 20px;
+}
+
+.confirmation {
+  margin-top: 20px;
+}
+
+.confirm-button {
+  background-color: green;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.confirm-button:hover {
+  background-color: darkgreen;
+}
+
+.pay-now-heading {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+</style>
+<body>
+  <div class="container">
+    <h2 class="pay-now-heading">Pay Now</h2>
+    <img src="qr.jpg" alt="QR Code" class="qr-code">
+    <form class="purchase-form">
+      <div class="plan-options">
+        <input type="radio" id="30days" name="plan" value="30days" >
+        <label for="30days">30 Days Plan</label><br>
+        <input type="radio" id="180days" name="plan" value="180days">
+        <label for="180days">180 Days Plan</label><br>
+        <input type="radio" id="360days" name="plan" value="360days">
+        <label for="360days">360 Days Plan</label><br>
+      </div>
+      <div class="confirmation">
+        <input type="checkbox" id="confirm" name="confirm" required>
+        <label for="confirm">I confirm my purchase</label> <br>
+        <button type="button" onclick="confirmPurchase()" class="confirm-button">Confirm</button>
+      </div>
+    </form>
+  </div>
+  <script>
+    function confirmPurchase() {
+      alert("You have confirmed your purchase. Payment process initiated.");
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Dashboard</title>
+</head>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+}
+
+#userInfo,
+#progress,
+#goals,
+#activityLog {
+    margin-top: 20px;
+}
+
+form {
+    margin-top: 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+</style>
+<body>
+    <div class="container">
+        <h1>Welcome to Your Fitness Dashboard</h1>
+        <div id="userInfo">
+            <!-- Display user's information -->
+        </div>
+        <div id="progress">
+            <!-- Display user's progress -->
+        </div>
+        <div id="goals">
+            <!-- Form for setting goals -->
+            <h2>Set Your Fitness Goals</h2>
+            <form id="goalForm">
+                <label for="stepsGoal">Steps Goal:</label>
+                <input type="number" id="stepsGoal" name="stepsGoal" required>
+                <label for="workoutTimeGoal">Workout Time Goal (minutes):</label>
+                <input type="number" id="workoutTimeGoal" name="workoutTimeGoal" required>
+                <button type="submit">Set Goals</button>
+            </form>
+        </div>
+        <div id="activityLog">
+            <!-- Form for logging fitness activities -->
+            <h2>Log Your Fitness Activities</h2>
+            <form id="activityForm">
+                <label for="steps">Steps Taken:</label>
+                <input type="number" id="steps" name="steps" required>
+                <label for="workoutTime">Workout Time (minutes):</label>
+                <input type="number" id="workoutTime" name="workoutTime" required>
+                <button type="submit">Log Activity</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Function to set goals
+// Function to set goals
+function setGoals(event) {
+    event.preventDefault();
+    const stepsGoal = parseInt(document.getElementById('stepsGoal').value);
+    const workoutTimeGoal = parseInt(document.getElementById('workoutTimeGoal').value);
+
+    // Save goals to localStorage or send to server
+    localStorage.setItem('stepsGoal', stepsGoal);
+    localStorage.setItem('workoutTimeGoal', workoutTimeGoal);
+
+    alert('Goals set successfully!');
+}
+
+// Function to log activity
+function logActivity(event) {
+    event.preventDefault();
+    const steps = parseInt(document.getElementById('steps').value);
+    const workoutTime = parseInt(document.getElementById('workoutTime').value);
+
+    // Calculate calories burned (example calculation)
+    const caloriesBurned = workoutTime * 5; // assuming 5 calories burned per minute
+
+    // Update progress
+    const stepsProgress = steps;
+    const workoutTimeProgress = workoutTime;
+
+    // Display progress
+    document.getElementById('progress').innerHTML = `
+        <h2>Your Progress</h2>
+        <p>Steps Taken: ${stepsProgress}</p>
+        <p>Workout Time: ${workoutTimeProgress} minutes</p>
+        <p>Calories Burned: ${caloriesBurned}</p>
+    `;
+}
+
+// Display user information and progress
+window.onload = function() {
+    // Retrieve user information from localStorage or server
+    const stepsGoal = localStorage.getItem('stepsGoal') || 'Not set';
+    const workoutTimeGoal = localStorage.getItem('workoutTimeGoal') || 'Not set';
+
+    // Display user information
+    document.getElementById('userInfo').innerHTML = `
+        <h2>Your Goals</h2>
+        <p>Steps Goal: ${stepsGoal}</p>
+        <p>Workout Time Goal: ${workoutTimeGoal} minutes</p>
+    `;
+
+    // Add event listeners to forms
+    document.getElementById('goalForm').addEventListener('submit', setGoals);
+    document.getElementById('activityForm').addEventListener('submit', logActivity);
+};
+
+
+    </script>
+        <script>
+            // internet connection
+            window.addEventListener('load', function() {
+              if (!navigator.onLine) {
+                // If there's no internet connection
+                document.body.innerHTML = "<h1>OOPS! Your internet connection is lost 😶</h1>";
+              }
+            });
+            </script>
+</body>
+</html>

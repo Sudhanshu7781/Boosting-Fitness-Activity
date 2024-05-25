@@ -1,0 +1,257 @@
+*{
+  margin:  0px;
+  padding: 0.80px;
+  box-sizing: border-box;
+} 
+
+/*
+*{
+  margin:  0.5px;
+  padding: 0.5px;
+  box-sizing: border-box;
+} 
+*/
+
+
+
+@media screen and (max-width: 700px){
+
+  .grid-container{
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: space-between;
+    flex-wrap: wrap;
+    height:auto;
+  }
+  .grid-child-calories,
+  .grid-child-grams {
+      height:auto;
+      flex:1;
+  }
+  .grid-child-calories{
+    order: 1;
+  }
+  
+  .grid-child-grams{
+    order: 2;
+  }
+  .total{
+    order:3;
+  }
+  .addBtn{
+    margin:auto;
+    width: auto;
+  }
+  .addCont{
+    margin:auto;
+    width: auto;
+    display: flex;
+    /* justify-content: center; */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: center;
+  }
+  #select-source{
+    margin: auto;
+  }
+  .resource-sup-div{
+    margin: auto;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+  .resources-dropdown{
+    margin: auto;
+    width: auto;
+    display: flex;
+    /* justify-content: center; */
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  
+}
+
+header {
+  background: #00a89d;
+  color: white;
+  padding: 0.5rem;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.30);
+  width: 100%;
+}
+
+body{
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7;
+  padding: 3px;
+}
+
+.input-calories{
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.grid-container{
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  /* align-items: center; */
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  height:auto;
+
+}
+
+.grid-child-calories{
+  /*width: 50%;*/
+
+  /* top: 15%;
+  left:15%; */
+  margin:5px;
+  border: tomato dashed 3px; 
+  border-radius: 8px;
+  padding: 4px;
+  /*float: left;*/
+}
+
+.grid-child-grams{
+  
+/*  width: 50%;*/
+
+  /* top: 55%;
+  left: 55%; */
+  margin:5px;
+  border: tomato dashed 3px;
+  border-radius: 8px;
+  padding: 4px;
+
+/*  float: left;*/
+}
+
+/*#CalculateButton: hover,*/
+.Button{
+  font-weight: bold;
+  font-size: 15px;
+  background: #00a89d;
+  border: 1px #00a89d solid;
+  border-radius: 8px;
+  padding: 4px;
+  cursor: pointer;
+}
+
+.Button:hover, 
+.Button:active{
+  color:#00a89d;
+  background-color: white;
+}
+
+
+.resources-dropdown{
+  display: flex;
+  /* justify-content: center; */
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.div-select-resource{
+  margin: auto;
+  display: flex;
+  /* justify-content: center; */
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
+.addCont{
+  margin: auto;
+  display: flex;
+  /* justify-content: center; */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
+.calorie-results-field{
+  align-items: center;
+}
+.resources{
+  display: flex;
+  /* justify-content: center; */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.total{
+  justify-content: center;
+}
+#select-source{
+  margin: auto;
+}
+input{
+  border: black 1px solid;
+  border-radius: 4px
+}
+
+.main-footer{
+  background-color: black;
+  display: flex;
+  margin-top: auto;
+  flex: 0;
+}
+
+.main-footer-a{
+  color: white;
+}
+
+.resource-sup-div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  padding: 8px;
+  width: 40rem;
+}
+
+.resource-chk{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin: 0 4px;
+}
+.res-para{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin:0 4px ;
+}
+.div-resource{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.resource-div-content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.resource-para-name{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  padding:0px 2px;
+  margin:auto; 
+}
